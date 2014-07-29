@@ -1,0 +1,27 @@
+{
+  "name": "bcp",
+  "description": "Node.js utility for interacting with SQL Server Bulk Copy Program (bcp).",
+  "version": "0.1.0",
+  "author": "Bret Copeland <bret@atlantisflight.org>",
+  "main": "./lib/Bcp.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bretcope/node-bcp.git"
+  },
+  "dependencies": {
+    "mkdirp": "^0.5.0",
+    "neo-debug": "0.0.2",
+    "odyssey": "^0.3.0",
+    "xml2js": "^0.4.4"
+  },
+  "devDependencies": {},
+  "scripts": {},
+  "keywords": [
+    "SQL Server",
+    "bulk",
+    "insert",
+    "export",
+    "bcp"
+  ],
+  "license": "MIT"
+}
