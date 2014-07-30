@@ -6,9 +6,9 @@ A node.js wrapper for the SQL Server [bcp utility](http://msdn.microsoft.com/en-
 
     npm install bcp
 
-You will need the `bcp` utility installed on your system. If you're running on Windows and use SQL Server, you probably already have this. If you're running on Linux or OSX, you'll need to [install FreeTDS](http://www.freetds.org/userguide/install.htm) which provides a reimplementation of bcp called `freebcp`. Alternately, on Linux, you may use [Microsoft's ODBC Driver for Linux](http://www.microsoft.com/en-us/download/details.aspx?id=28160) which comes includes the bcp utility.
+You will need the `bcp` utility installed on your system. If you're running on Windows and use SQL Server, you probably already have this. On Linux, you can use [Microsoft's ODBC Driver for Linux](http://www.microsoft.com/en-us/download/details.aspx?id=28160) which comes includes the bcp utility. On OSX, sorry, better luck next time.
 
-If you use `freebcp` you will either need to create a symbolic link to it called `bcp` or you'll need to set `{ exec: 'freebcp' }` option when constructing the Bcp object.
+> This library does not support FreeTDS's reimplementation called `freebcp`. Their implementation is very incomplete and differs enough from the Microsoft version 
 
 ## Bulk Import Example
 
