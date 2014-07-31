@@ -1,11 +1,11 @@
 "use strict";
 
 /* =============================================================================
- * 
+ *
  * THIS IS A SCRATCH PAD FOR INITIAL TESTING - IT WILL EVENTUALLY BE REMOVED
- * 
+ *
  * However, since it show some examples, I am leaving it in the repo for now.
- *  
+ *
  * ========================================================================== */
 
 var Bcp = require('./');
@@ -30,7 +30,7 @@ b.prepareBulkInsert('BulkTest', ['oneDate', 'nullDate', 'myInteger', 'myFloat', 
 		console.error(error);
 		return;
 	}
-	
+
 	imp.writeRows([
 		{ oneDate: new Date(), nullDate: null, myInteger: 8, myFloat: 26.4, myString: 'Hellow', myAscii: 'veeeryone', myBit: true },
 		{ oneDate: new Date('2013-01-01'), nullDate: null, myInteger: 7, myFloat: 23.3, myString: 'Seven', myAscii: 'Three', myBit: false },
@@ -39,7 +39,7 @@ b.prepareBulkInsert('BulkTest', ['oneDate', 'nullDate', 'myInteger', 'myFloat', 
 //		{ id: 1, oneDate: new Date('2014-10-01 12:00:00.000'), nullDate: null, myInteger: 23, myFloat: 23.7, myString: 'This unicode	string ? with tabs', myAscii: 'this	string with tabs', myBit: true },
 //		{ id: 5, oneDate: new Date('2014-10-01 12:00:00.000'), nullDate: null, myInteger: 23, myFloat: 23.7, myString: 'This unicode	string ☃ with tabs', myAscii: 'this	string with tabs', myBit: true },
 	]);
-	
+
 	imp.execute(function (error)
 	{
 		if (error)
