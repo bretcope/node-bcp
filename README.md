@@ -67,6 +67,30 @@ b.prepareBulkInsert('MyTable', ['myDate', 'myFloat', 'myString'], function (err,
 });
 ```
 
+## Bulk Export Example
+
+```js
+var b = new Bcp({
+  user: 'login_name',
+  password: 'password',
+  database: 'MyDatabase',
+  checkConstraints: false,
+  unicode: false,
+  native: true // if need native data format.
+});
+
+var customOptions = {
+  read: false,
+  keepFiles: true,
+  sql: 'select * from MyDatabase.dbo.MyTable where id = 1' // if need select query, do like this.
+};
+
+b.bulkExport(tablename, customOptions, function (err) {
+
+});
+```
+
+
 > For a full description of all of the options which can be passed to the Bcp constructor, see [lib/Bcp.js](https://github.com/bretcope/node-bcp/blob/master/lib/Bcp.js) and Microsoft's [bcp documentation](http://msdn.microsoft.com/en-us/library/ms162802.aspx).
 
 ## Other Notes
